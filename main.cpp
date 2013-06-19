@@ -5,10 +5,10 @@ using namespace std;
 
 int main()
 {
+    // TABLA HASH
     cout << "Hello Hash Table!" << endl;
     HashTable *h = new HashTable();
     cout << h->hashFuntion("D") << endl;
-
     h->insertData("Ana");
     h->insertData("Daniel");
     h->insertData("Dario");
