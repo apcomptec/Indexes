@@ -24,7 +24,10 @@ HEADERS += \
     dataType/IData.h \
     dataType/DoubleData.h \
     dataStructure/INode.h \
-    util/Converter.h
+    util/Converter.h \
+    dataStructure/INode.h \
+    dataStructure/DLLNode.h \
+    dataStructure/DLL.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \
