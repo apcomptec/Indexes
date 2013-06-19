@@ -26,3 +26,7 @@ HEADERS += \
     dataStructure/INode.h \
     util/Converter.h
 
+OTHER_FILES += \
+    doc/Indexes_UML.xmi \
+    doc/Indexes_UML.pdf
+
