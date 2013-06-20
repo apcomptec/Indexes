@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     dataType/IntegerData.cpp \
     dataType/DoubleData.cpp \
     util/Converter.cpp \
-    util/Encryption.cpp
+    util/Encryption.cpp \
+    util/randomnumber.cpp
 
 HEADERS += \
     HashTable.h \
@@ -29,7 +30,8 @@ HEADERS += \
     dataStructure/INode.h \
     dataStructure/DLLNode.h \
     dataStructure/DLL.h \
-    util/Encryption.h
+    util/Encryption.h \
+    util/randomnumber.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \

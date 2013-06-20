@@ -22,7 +22,8 @@ int main()
 //    h->insertData("Donaldo");
 //    h->printHashTable();
     Encryption *p = new Encryption();
-    p->passwordEncryption("Daniel");
+    //p->passwordEncryption("Daniel");
+    p->generateRandomPassword();
     return 0;
 }
 
