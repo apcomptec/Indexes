@@ -23,7 +23,6 @@ SOURCES += main.cpp \
     dataStructure/Btree.cpp
 
 HEADERS += \
-    HashTable.h \
     dataStructure/DLLNode.h \
     dataStructure/DLL.h \
     dataType/StringData.h \
@@ -51,7 +50,8 @@ HEADERS += \
     fileHandling/binaryStruct/BTRecord.h \
     dataStructure/HashElement.h \
     dataStructure/Node.h \
-    dataStructure/Btree.h
+    dataStructure/Btree.h \
+    dataStructure/HashTable.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \

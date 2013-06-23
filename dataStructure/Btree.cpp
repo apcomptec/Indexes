@@ -430,31 +430,3 @@ Btree :: ~Btree( )
 {
     deltree ( root ) ;
 }
-
-int main( )
-{
-    Btree b ;
-   // int arr[ ] = { 27, 42, 22, 47, 32, 2, 51, 40, 13 } ;
-    int arr [ ]={30,60,45,8,22,35,4,28,52,33,13,39,41,43,24,
-                 25,15};
-    int sz = sizeof ( arr ) / sizeof ( int ) ;
-    for ( int i = 0 ; i < sz ; i++ )
-        b.insert ( arr[i] ) ;
-    cout << "arbol B en orden 5:" << endl ;
-
-    b.show( ) ;
-
-
-   // b.insert(22);
-   // b.insert(17);
-  // cout<< "\n"<<endl;
-  //  b.show();
-
-
-
-   // b.erase ( 51 ) ;
-  //b.erase ( 11 ) ;
-    //cout << "despues de borrado" << endl ;
-   // b.show( ) ;
-    cout<<"\n"<<endl;
-}
