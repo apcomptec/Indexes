@@ -26,7 +26,7 @@ public:
     void fillnode ( int Ipointer, Node *temp, Node *node, int kposition ) ;//fill node ,depends in position
     void split ( int Ipointer, Node *temp, Node *node, int kposition, int *ypos, Node **newnode ) ;//separate the tree
     void erase( int Ipointer ) ;//erase pointer in the tree
-    int eraseaux ( int Ipointer, Node *root ) ;//help the search the node for erase the node
+    int searchAux ( int Ipointer, Node *root ) ;//help the search the node for erase the node
     void clear ( Node *root, int kpos ) ;//position clear
     void copy ( Node *root, int i ) ;//funtion aux for copy the node
     void restore ( Node *root, int i ) ;//restore many nodes after erase
@@ -36,6 +36,7 @@ public:
     void show( ) ;//print the Btree
     static void display ( Node *root ) ;//help the show the Btree
     static void deltree ( Node *root ) ;//erase all the Btree
+    bool search(int pPointer); //Busqueda dentro del arbol
     ~Btree( ) ;//Memory
 
 };

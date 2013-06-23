@@ -24,7 +24,7 @@ void Btree :: insert (int Ipointer)
         head-> child[0] = root ;
         head-> child[1] = cont ;
         root = head ;
-   }
+    }
 }
 /**
  * @brief Btree::setIpointer
@@ -177,9 +177,9 @@ void Btree ::split(int Ipointer, Node *temp, Node *node, int kposition, int *ypo
  */
 void Btree ::erase(int Ipointer)
 {
-     Node * temp ;
+    Node * temp ;
 
-    if ( ! eraseaux( Ipointer, root ) )
+    if ( ! searchAux( Ipointer, root ) )
         cout << endl << "Value " << Ipointer << " not found." ;
     else
     {
@@ -197,7 +197,7 @@ void Btree ::erase(int Ipointer)
  * @param root
  * @return erase aux
  */
-int Btree ::eraseaux(int Ipointer, Node *root)
+int Btree ::searchAux(int Ipointer, Node *root)
 {
     int i ;
     int flag ;
@@ -212,7 +212,7 @@ int Btree ::eraseaux(int Ipointer, Node *root)
             if ( root -> child[i - 1] )
             {
                 copy ( root, i ) ;
-                flag = eraseaux ( root -> value[i], root -> child[i] ) ;
+                flag = searchAux ( root -> value[i], root -> child[i] ) ;
                 if ( !flag )
                     cout << endl << "Value " << Ipointer << " not found." ;
             }
@@ -220,7 +220,7 @@ int Btree ::eraseaux(int Ipointer, Node *root)
                 clear ( root, i ) ;
         }
         else
-            flag = eraseaux( Ipointer, root -> child[i] ) ;
+            flag = searchAux( Ipointer, root -> child[i] ) ;
         if ( root -> child[i] != NULL )
         {
             if ( root -> child[i] -> count < MIN )
@@ -421,6 +421,30 @@ void Btree ::deltree(Node *root)
         delete ( root -> child[i] ) ;
     }
 }
+
+/**
+ * @brief Btree::erase
+ * @param Ipointer
+ */
+bool Btree ::search(int Ipointer)
+{
+    Node * temp ;
+
+    if ( ! searchAux( Ipointer, root ) ){
+        cout << endl << "Value " << Ipointer << " not found." ;
+        return false;
+    }
+    else
+    {
+        if ( root -> count == 0 )
+        {
+            temp = root ;
+            root = root -> child[0] ;
+            return true;
+        }
+    }
+}
+
 /**
  * @brief Btree::~Btree
  *memory
