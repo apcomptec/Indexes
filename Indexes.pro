@@ -14,7 +14,12 @@ SOURCES += main.cpp \
     dataType/DoubleData.cpp \
     util/Converter.cpp \
     util/Encryption.cpp \
-    util/randomnumber.cpp
+    util/randomnumber.cpp \
+    raid/raid0.cpp \
+    raid/Disk.cpp \
+    fileHandling/binaryStruct/BTRecordFileMetadata.cpp \
+    fileHandling/binaryStruct/BTRecordFile.cpp \
+    fileHandling/binaryStruct/BTRecord.cpp
 
 HEADERS += \
     HashTable.h \
@@ -32,7 +37,18 @@ HEADERS += \
     dataStructure/DLL.h \
     example/bplustree/BPlusTree.h \
     util/randomnumber.h \
-    util/Encryption.h
+    util/Encryption.h \
+    raid/raid0.h \
+    raid/IRaid.h \
+    raid/Disk.h \
+    fileHandling/RecordDataType.h \
+    fileHandling/IRecordFile.h \
+    fileHandling/IRecordDataType.h \
+    fileHandling/IRecord.h \
+    fileHandling/IMetadata.h \
+    fileHandling/binaryStruct/BTRecordFileMetadata.h \
+    fileHandling/binaryStruct/BTRecordFile.h \
+    fileHandling/binaryStruct/BTRecord.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \
