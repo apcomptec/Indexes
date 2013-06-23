@@ -7,8 +7,6 @@ QT +=  core
 QMAKE_CXXFLAGS += -std=c++0x
 
 SOURCES += main.cpp \
-    HashTable.cpp \
-    HashElement.cpp \
     dataType/StringData.cpp \
     dataType/IntegerData.cpp \
     dataType/DoubleData.cpp \
@@ -19,11 +17,13 @@ SOURCES += main.cpp \
     raid/Disk.cpp \
     fileHandling/binaryStruct/BTRecordFileMetadata.cpp \
     fileHandling/binaryStruct/BTRecordFile.cpp \
-    fileHandling/binaryStruct/BTRecord.cpp
+    fileHandling/binaryStruct/BTRecord.cpp \
+    dataStructure/HashElement.cpp \
+    dataStructure/HashTable.cpp \
+    dataStructure/Btree.cpp
 
 HEADERS += \
     HashTable.h \
-    HashElement.h \
     dataStructure/DLLNode.h \
     dataStructure/DLL.h \
     dataType/StringData.h \
@@ -48,7 +48,10 @@ HEADERS += \
     fileHandling/IMetadata.h \
     fileHandling/binaryStruct/BTRecordFileMetadata.h \
     fileHandling/binaryStruct/BTRecordFile.h \
-    fileHandling/binaryStruct/BTRecord.h
+    fileHandling/binaryStruct/BTRecord.h \
+    dataStructure/HashElement.h \
+    dataStructure/Node.h \
+    dataStructure/Btree.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \
