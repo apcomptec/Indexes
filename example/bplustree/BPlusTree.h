@@ -19,7 +19,6 @@
 #define _XOPEN_SOURCE 600
 #endif
 #include <stdlib.h>
-
 #include <assert.h>
 #include <boost/static_assert.hpp>
 #include <boost/pool/object_pool.hpp>
