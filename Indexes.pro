@@ -30,9 +30,9 @@ HEADERS += \
     dataStructure/INode.h \
     dataStructure/DLLNode.h \
     dataStructure/DLL.h \
-    example/bplustree/BPlusTree.h
-    util/Encryption.h \
-    util/randomnumber.h
+    example/bplustree/BPlusTree.h \
+    util/randomnumber.h \
+    util/Encryption.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \
