@@ -56,16 +56,16 @@ bool HashTable::noEquals(IData &pData1, IData &pData2)
  * @brief HashTable::insertData
  * @param pKey
  */
-void HashTable::insertData( string pKey)//, const DLL<INode *> &list
+void HashTable::insertData(string pKey, DLL<IRecordDataType *> *pList)//, const DLL<INode *> &list
 {
     _contador++;
-    if(insertData_AUX(pKey) == true){
+    if(insertData_AUX(pKey, pList) == true){
         cout << "FIN de inserción en nodo existente" << endl;
     }
     else{
         int vectorIndex = hashFuntion( pKey );
         HashElement *tmp = new HashElement();
-        //tmp->setUserDataList( list );
+        tmp->setUserDataList( pList );
         tmp->setBullshit( _contador );
         if ((*this->_array)[vectorIndex] == NULL){
             cout << "varas" << endl;
@@ -93,7 +93,7 @@ void HashTable::insertData( string pKey)//, const DLL<INode *> &list
  * @return
  * Inserta en un nodo que anteriormente ha sido borrado
  */
-bool HashTable::insertData_AUX( string pKey)//, const DLL<INode *> &list
+bool HashTable::insertData_AUX(string pKey, DLL<IRecordDataType *> *pList)
 {
     int vectorIndex = hashFuntion( pKey );
     HashElement *tmp = new HashElement();
@@ -101,7 +101,7 @@ bool HashTable::insertData_AUX( string pKey)//, const DLL<INode *> &list
     while( tmp != 0 ){
         if( tmp->getDeletedElement() == true ){
             tmp->setDeletedElement( false );
-            //tmp->setUserDataList( list );
+            tmp->setUserDataList( pList );
             cout << "AUX el dato: " << pKey << endl;
             return true;
         }
@@ -186,7 +186,15 @@ void HashTable::printHashTable()
         tmp = (*this->_array)[i];
         while( tmp != 0 ){
             if (!tmp->getDeletedElement()){
-                cout << tmp->getBullshit() << endl;
+                cout << tmp->getBullshit() <<
+                        " Datos que el usuario introdujo" << endl;
+                DLLNode<IRecordDataType*> *tmp1 = tmp->getUserDataList()->getHeadPtr();
+                while( tmp1 != 0 ){
+
+                    cout << tmp1->getData()->getName() << " ";
+                    cout << tmp1->getData()->getSize() << endl;
+                    tmp1 = tmp1->getNextPtr();
+                }
             }
             tmp = tmp->getNextHashElement();
         }

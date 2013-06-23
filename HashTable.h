@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include "fileHandling/RecordDataType.h"
 #include "dataType/IData.h"
 #include "util/Converter.h"
 #include "HashElement.h"
@@ -21,8 +22,8 @@ public:
     virtual bool lower( IData &pData1, IData &pData2 );
     virtual bool noEquals( IData &pData1, IData &pData2 );
 //******************************************************************************
-    void insertData( std::string pKey );            // Inserción en tabla hash
-    bool insertData_AUX( string pKey);              // Inserción AUX en tabla hash
+    void insertData(std::string pKey, DLL<IRecordDataType *> *pList);            // Inserción en tabla hash
+    bool insertData_AUX( string pKey, DLL<IRecordDataType *> *pList);              // Inserción AUX en tabla hash
     void deleteData(std::string pKey , int pDato);  // Borrado en tabla hash
     void searchData( std::string pKey );            // Búsqueda en tabla hash
     int hashFuntion( std::string pKey );            // Función Hash

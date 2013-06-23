@@ -31,7 +31,7 @@ HashElement* HashElement::getNextHashElement()
  * @brief HashElement::getUserDataList
  * @return
  */
-DLL<INode *> HashElement::getUserDataList() const
+DLL<IRecordDataType *> *HashElement::getUserDataList() const
 {
     return _list;
 }
@@ -40,9 +40,9 @@ DLL<INode *> HashElement::getUserDataList() const
  * @brief HashElement::setUserDataList
  * @param list
  */
-void HashElement::setUserDataList(const DLL<INode *> &list)
+void HashElement::setUserDataList(DLL<IRecordDataType *> *pList)
 {
-    this->_list = list;
+    this->_list = pList;
 }
 
 int HashElement::getBullshit() const
