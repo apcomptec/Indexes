@@ -20,7 +20,9 @@ SOURCES += main.cpp \
     fileHandling/binaryStruct/BTRecord.cpp \
     dataStructure/HashElement.cpp \
     dataStructure/HashTable.cpp \
-    dataStructure/Btree.cpp
+    dataStructure/Btree.cpp \
+    dataStructure/Arbolaster.cpp \
+    dataStructure/NodeAster.cpp
 
 HEADERS += \
     dataStructure/DLLNode.h \
@@ -51,7 +53,9 @@ HEADERS += \
     dataStructure/HashElement.h \
     dataStructure/Node.h \
     dataStructure/Btree.h \
-    dataStructure/HashTable.h
+    dataStructure/HashTable.h \
+    dataStructure/NodeAster.h \
+    dataStructure/Arbolaster.h
 
 OTHER_FILES += \
     doc/Indexes_UML.xmi \

@@ -5,6 +5,8 @@
 #include "fileHandling/binaryStruct/BTRecordFileMetadata.h"
 #include "fileHandling/RecordDataType.h"
 #include "dataStructure/Btree.h"
+#include "dataStructure/Arbolaster.h"
+#include "dataStructure/Arbolaster.cpp"
 
 using namespace std;
 
@@ -104,16 +106,35 @@ int main(){
 ////    h->printHashTable();
 ////    return 0;
 ///
-    Btree b ;
-    int arr [ ]={30,60,45,8,22,35,4,28,52,33,13,39,41,43,24,
-                 25,15};
-    int sz = sizeof ( arr ) / sizeof ( int ) ;
-    for ( int i = 0 ; i < sz ; i++ )
-        b.insert ( arr[i] ) ;
-    cout << "arbol B en orden 5:" << endl ;
+//    Btree b ;
+//    int arr [ ]={30,60,45,8,22,35,4,28,52,33,13,39,41,43,24,
+//                 25,15};
+//    int sz = sizeof ( arr ) / sizeof ( int ) ;
+//    for ( int i = 0 ; i < sz ; i++ )
+//        b.insert ( arr[i] ) ;
+//    cout << "arbol B en orden 5:" << endl ;
 
-    b.show( ) ;
+//    b.show( ) ;
 
-    cout<<"\n"<<endl;
+//    b.erase(35);
+
+//    b.show();
+
+//    cout<<"\n"<<endl;
+
+    ArbolAster<int>* b=new ArbolAster<int>(4);
+    b->Insertar(22);
+    b->Insertar(12);
+    b->Insertar(25);
+    b->Insertar(43);
+    b->Insertar(76);
+    b->Insertar(34);
+    b->Insertar(21);
+    b->Preorden(b);
+
+    cout << "Raiz: ";
+    b->Mostrar(b->Raiz);
+
+    return 0;
 }
 
